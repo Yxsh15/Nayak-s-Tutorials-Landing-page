@@ -1,0 +1,61 @@
+.hero_info{
+    display: block;
+    align-items: center;
+    font-family:"poppins";
+    padding-bottom: 5px;
+}
+.hero_info h1{
+    margin-left: 550px;
+    font-size: 2rem;
+    color: #C00000;
+}
+.hero_info p{
+    padding: 10px 180px 40px 180px;
+    font-size: 1.25rem;
+}
+.hero_info h2{
+    font-size: 1.75rem;
+    margin-left: 490px;
+    padding-bottom: 20px;
+    /* text-sha */
+}
+.hero_info .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.8rem;  
+}
+.hero_info .info p {
+    font-size: 1rem;
+}
+.desc{
+    width: 85%;
+}
+.desc p{
+    font-weight: 400;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}   
+.features{
+    height: 590px;
+    padding: 10px;
+    border-left: 3px solid #DA1F24;
+    margin-left: 0;
+    margin-right: 100px
+}
+.features p{
+    font-size: 1rem;
+    padding: 0;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    margin-left: 0;
+}
+.features ul{
+    list-style-type: none;
+    margin-left: 0px;
+    font-size: 1rem;
+}   
+.features li{
+    padding-bottom: 10px;
+}

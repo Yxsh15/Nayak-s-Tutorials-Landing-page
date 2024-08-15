@@ -1,0 +1,15 @@
+nav{
+    background: #F6F7FD;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 17%;
+    border: 3px solid #DA1F24;
+    padding: 20px;
+}
+.number{
+    font-size: 3.8rem;
+    font-weight: lighter;
+}

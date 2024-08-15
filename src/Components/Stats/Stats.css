@@ -1,0 +1,33 @@
+.Stats{
+    background-color: white;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+.Stats h1{
+    padding-left: 220px;
+    padding-right: 220px;
+    margin-left: 275px;
+    font-size: 2.2rem;
+}
+.numbers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.num{
+    display: inline-grid;
+   padding-left: 80px;
+    color: #DA1F24;
+    font-size: 5rem;
+    font-weight: 500;
+}
+.num p{
+    font-size:1rem;
+    padding-right: 20px;
+    font-weight: 400;
+    color: #767694;
+}

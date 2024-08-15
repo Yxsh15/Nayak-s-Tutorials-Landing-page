@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    height: 1vh;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordian {
+    width: 500px;
+}
+
+.item {
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+
+.title {
+    background-color: #da1f24;
+    height: 80px;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px; 
+    
+}
+
+.content {
+    color: #000;
+    border-radius: 10px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 20px; 
+}
+
+.content.show {
+    max-height: 500px; 
+    font-size: 1rem;
+    padding: 15px 20px; 
+}
+.title h2 {
+    font-size: 18px; /* Decrease the font size */
+    margin: 0; /* Remove default margins for better alignment */
+    flex-grow: 1; /* Ensure it takes up available space */
+}

@@ -1,0 +1,40 @@
+.Center{
+    padding-top: 20px;
+    width: 80%;
+}
+.Center h1{
+    margin-left: 540px;
+    font-size: 2.4rem;
+}
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    margin-left: 300px;
+    margin-right: 230px;
+    padding: 10px;
+}
+.map{
+    display: block;
+    width: 300px;
+}
+.map p{
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+    color: black;
+    padding-top: 5px;
+}
+.map span{
+    font-size: 0.8rem;
+    color: #DA1F24;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.Center a{
+    margin-left: 65px;
+    padding: 30px;
+    padding-bottom: 30px;
+    border: 4px solid  #DA1F24;
+}

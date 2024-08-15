@@ -1,0 +1,26 @@
+.faq{
+    width: 100%;
+    padding-top: 50px;
+    margin-top: 10px;
+}
+.faq h1{
+    padding-top: 30px;
+    margin-left: 370px;
+    font-weight: 800;
+    font-size: 2.9rem;
+}
+.faq img{
+    width: 650px;
+    margin-left: 65px;
+    /* padding-left: 80px;  */
+}
+.drop{
+    height: 500px;
+    margin-bottom: 450px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 290px;
+}

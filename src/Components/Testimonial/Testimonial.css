@@ -1,0 +1,23 @@
+.Video{
+    display: block;
+    justify-content: center;
+}
+.Video h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 270px;
+    margin-right: 200px;
+    padding: 20px;
+    padding-right: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.Vid{
+    padding: 20px;
+    width: 60%;
+    margin-left: 320px;
+    margin-right: 200px;
+    padding-bottom: 80px;
+}
