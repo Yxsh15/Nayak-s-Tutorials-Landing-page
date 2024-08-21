@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './Form.css';
 import SBC from "../../assets/SBC.jpg";
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -46,10 +49,16 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isFormValid) {
-      // Handle form submission logic
-      console.log("Form submitted successfully!");
+      emailjs.send('service_v65vgzk', 'template_gmhe05e', formData, 'i6XlZKvm209jSmYvo')
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          toast.success('Form submitted successfully!');
+        }, (error) => {
+          console.error('FAILED...', error);
+          toast.error(`Failed to submit the form. ${error.text || 'Please try again later.'}`);
+        });
     } else {
-      alert("Please fill out all fields correctly before submitting.");
+      toast.error('Please fill out all fields correctly before submitting.');
     }
   };
 
@@ -57,7 +66,7 @@ const Form = () => {
     <div className='form'>
       <div className="container">
         <div className="image">
-          <img src={SBC} alt='' />
+          <img src={SBC} alt='SBC Logo' />
         </div>
         <form onSubmit={handleSubmit}>
           <h1>Apply Now</h1>
@@ -125,25 +134,25 @@ const Form = () => {
             /> No
           </div>
 
-          <label htmlFor="centre">Your nearest Centre:</label>
+          <label htmlFor="centre">Your nearest Center:</label>
           <select
             name="centre"
             value={formData.centre}
             onChange={handleChange}
           >
             <option value="Select">Select</option>
-            <option value="Thane">Naupada, Thane</option>
-            <option value="Thane">Vartak Nagar, Thane</option>
-            <option value="Thane">Vasant Vihar, Thane</option>
-            <option value="Thane">Manpada, Thane</option>
+            <option value="Naupada, Thane">Naupada, Thane</option>
+            <option value="Vartak Nagar, Thane">Vartak Nagar, Thane</option>
+            <option value="Vasant Vihar, Thane">Vasant Vihar, Thane</option>
+            <option value="Manpada, Thane">Manpada, Thane</option>
             <option value="Thane">Hiranandani, Thane</option>
-            <option value="Thane">Anand Nagar, Thane</option>
-            <option value="Thane">Kalwa, Thane</option>
-            <option value="Mira road">Mira Road, Sec 5</option>
-            <option value="Mira road">Mira Road, Jangid</option>
-            <option value="Mulund">Mulund, Veena Nagar</option>
-            <option value="Mulund">Mulund East</option>
-            <option value="Bandra">Bandra, Mumbai</option>
+            <option value="Hiranandani, Thane">Anand Nagar, Thane</option>
+            <option value="Kalwa, Thane">Kalwa, Thane</option>
+            <option value="Mira Road, Sec 5">Mira Road, Sec 5</option>
+            <option value="Mira Road, Jangid">Mira Road, Jangid</option>
+            <option value="Mulund, Veena Nagar">Mulund, Veena Nagar</option>
+            <option value="Mulund East">Mulund East</option>
+            <option value="Bandra, Mumbai">Bandra, Mumbai</option>
           </select>
 
           <button className='submit' type="submit" disabled={!isFormValid}>
@@ -154,9 +163,9 @@ const Form = () => {
       <div className="disclaimer">
         Disclaimer: By submitting this form, I hereby authorise your representatives to contact me via call / SMS / WhatsApp/ email communication. For more details, read our <a href='https://milkarjeetayenge.com/privacy-policy/' >Privacy Policy</a>.
       </div>
+      <ToastContainer /> {/* Add ToastContainer */}
     </div>
   );
 };
 
 export default Form;
-  
